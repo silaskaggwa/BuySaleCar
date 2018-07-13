@@ -17,7 +17,7 @@ build
 *.iml
 *.ipr
 *.iws
-.idea
+.idea/
 out
 
 # mac
