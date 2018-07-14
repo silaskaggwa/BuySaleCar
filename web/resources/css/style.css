@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Berlin Sans FB Demi";
+}
+#wrapper{
+    max-width: 1000px;
+    margin: auto;
+    background-color: burlywood;
+}
+#content-wrapper{
+overflow: auto;
+}
+#aside{
+    width:30%;
+    background-color: burlywood;
+    height: inherit;
+    float:left;
+}
+#contents{
+    width: 70%;
+    background-color: aqua;
+    height: inherit;
+    float:right;
+}
+footer{
+    text-align: center;
+background-color: brown;
+    height: 30px;
+    color:white;
+    vertical-align: middle;
+}
+.car-info-wrapper{
+    width: 30%;
+    height: auto;
+    float: left;
+    margin: 10px;
+    border: 1px solid red;
+}
+.image-wrapper img{
+    width: 100%;
+    height: 200px;
+}
+.info-wrapper{
+    height:100px ;
+    width: 100%;
+    text-align: center;
+}
