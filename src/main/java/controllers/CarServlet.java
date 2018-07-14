@@ -1,5 +1,8 @@
 package controllers;
 
+import com.google.gson.Gson;
+import datastorage.DataStorage;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,9 +14,9 @@ public class CarServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         PrintWriter out = response.getWriter();
 
-        String myJsonString = "{name: 'silas'}";
+        String myJsonString = "{name: '"+DataStorage.INSTANCE.getUserByUsername("bishwa").getPassword() +"'}";
 
-        out.print(myJsonString);
-        out.flush();
+        out.print(new Gson().toJson(DataStorage.INSTANCE.getAllCars()));
+        //out.flush();
     }
 }

@@ -17,7 +17,6 @@ public enum DataStorage {
     private List<User> users = new ArrayList<>();
 
     public void loadDefaultData(){
-
         User u1 = new User(1,"silas", "kaggwa", "silakag@gmail.com",
                 "034234234","1000N St. Maharishi", "silas","12345");
         User u2 = new User(2,"bishwa", "bishwa", "bishwa@gmail.com",
@@ -30,26 +29,27 @@ public enum DataStorage {
         users.add(u3);
 
         cars.add(new Car(1, "GNG 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "", u1));
+                new Date(), 0, "", u1));
         cars.add(new Car(2, "GYT 543","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "", u1));
+                new Date(), 0, "", u1));
         cars.add(new Car(3, "GNG 654","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
+                new Date(), 0, "",u2));
         cars.add(new Car(4, "PYT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
+                new Date(), 0, "",u2));
         cars.add(new Car(5,"MGT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
+                new Date(), 0, "",u3));
         cars.add(new Car(6, "CFT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
+                new Date(), 0, "",u3));
         cars.add(new Car(7, "TGD 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
+                new Date(), 0, "",u3));
         cars.add(new Car(8, "RHI 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u1));
+                new Date(), 0, "",u1));
         cars.add(new Car(9, "BPT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
+                new Date(), 0, "",u2));
         cars.add(new Car(10, "JVT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
+                new Date(), 0, "",u2));
 
+        System.out.println("=======>>>>data loaded");
     }
 
     public Car addCar(Car car) throws CarAlreadyExistsException {
