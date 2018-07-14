@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 public class User {
     private int id;
     private String firstname;
@@ -9,10 +11,12 @@ public class User {
     private String address;
     private String userName;
     private String password;
-  //  private List<>
 
 
-    public User(int id, String firstname, String lastName, String email, String phoneNumber, String address, String userName, String password) {
+
+    private List<Car> cars;
+
+    public User(int id, String firstname, String lastName, String email, String phoneNumber, String address, String userName, String password, List<Car> cars) {
         this.id = id;
         this.firstname = firstname;
         this.lastName = lastName;
@@ -21,6 +25,7 @@ public class User {
         this.address = address;
         this.userName = userName;
         this.password = password;
+        this.cars = cars;
     }
 
     public int getId() {
@@ -86,6 +91,12 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    public List<Car> getCars() {
+        return cars;
+    }
 
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
 }
