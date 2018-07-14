@@ -50,7 +50,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Log In</a></li>
-                <li><a href="#">Register</a></li>
+                <li id="Register"><a href="#">Register</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -217,6 +217,35 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="model">Close</button>
                         <button type="button" class="btn btn-primary">Add Car</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="registerUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="first-name" class="col-form-label">First Name:</label>
+                                <input type="text" class="form-control" id="first-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name" class="col-form-label">Last Name:</label>
+                                <textarea class="form-control" id="last-name"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
                     </div>
                 </div>
             </div>
