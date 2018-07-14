@@ -5,6 +5,7 @@ import java.util.Date;
 public class Car {
 
     private int id;
+    private String license;
     private String model;
     private String brand;
     private double price;
@@ -13,17 +14,30 @@ public class Car {
     private Date date;
     private double discount;
     private String image;
+    private User owner;
 
-    public Car(int id, String model, String brand, double price, String color, boolean isSold, Date date, double discount, String image) {
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public Car(int id, String license, String model, String brand, double price, String color, boolean isSold, Date date,
+               double discount, String image, User owner) {
         this.id = id;
+        this.license = license;
         this.model = model;
         this.brand = brand;
         this.price = price;
         this.color = color;
         this.isSold = isSold;
+
         this.date = date;
         this.discount = discount;
         this.image = image;
+        this.owner = owner;
     }
 
     public int getId() {
@@ -96,5 +110,9 @@ public class Car {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public User getOwner(){
+        return this.owner;
     }
 }

@@ -16,7 +16,8 @@ public class User {
 
     private List<Car> cars;
 
-    public User(int id, String firstname, String lastName, String email, String phoneNumber, String address, String userName, String password, List<Car> cars) {
+    public User(int id, String firstname, String lastName, String email, String phoneNumber, String address,
+                String userName, String password) {
         this.id = id;
         this.firstname = firstname;
         this.lastName = lastName;
@@ -25,7 +26,6 @@ public class User {
         this.address = address;
         this.userName = userName;
         this.password = password;
-        this.cars = cars;
     }
 
     public int getId() {
