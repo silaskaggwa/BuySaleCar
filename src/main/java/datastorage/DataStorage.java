@@ -29,25 +29,25 @@ public enum DataStorage {
         users.add(u3);
 
         cars.add(new Car(1, "GNG 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "", u1));
+                new Date(), 0, "resources/images/a.jpg", u1));
         cars.add(new Car(2, "GYT 543","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "", u1));
+                new Date(), 0, "resources/images/a.jpg", u1));
         cars.add(new Car(3, "GNG 654","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u2));
+                new Date(), 0, "resources/images/a.jpg",u2));
         cars.add(new Car(4, "PYT 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u2));
+                new Date(), 0, "resources/images/a.jpg",u2));
         cars.add(new Car(5,"MGT 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u3));
+                new Date(), 0, "resources/images/a.jpg",u3));
         cars.add(new Car(6, "CFT 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u3));
+                new Date(), 0, "resources/images/a.jpg",u3));
         cars.add(new Car(7, "TGD 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u3));
+                new Date(), 0, "resources/images/a.jpg",u3));
         cars.add(new Car(8, "RHI 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u1));
+                new Date(), 0, "resources/images/a.jpg",u1));
         cars.add(new Car(9, "BPT 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u2));
+                new Date(), 0, "resources/images/a.jpg",u2));
         cars.add(new Car(10, "JVT 123","2000", "Toyota", 20000, "red", false,
-                new Date(), 0, "",u2));
+                new Date(), 0, "resources/images/a.jpg",u2));
 
         System.out.println("=======>>>>data loaded");
     }
