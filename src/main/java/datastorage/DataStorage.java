@@ -31,25 +31,25 @@ public enum DataStorage {
         users.add(u2);
         users.add(u3);
 
-        cars.add(new Car(1, "GNG 123","2000", "Toyota", 7400, "red","Sedan", false,
+        cars.add(new Car(1, "GNG 123","2000", carBrands[0], 7400, "red","Sedan", false,
                 new Date(), 0, "resources/images/a.jpg", u1));
-        cars.add(new Car(2, "GYT 543","2000", "Toyota", 23000, "red","SUV", false,
+        cars.add(new Car(2, "GYT 543","2000", carBrands[1], 23000, "red","SUV", false,
                 new Date(), 0, "resources/images/a.jpg", u1));
-        cars.add(new Car(3, "GNG 654","2000", "Toyota", 6700, "red","Van", false,
+        cars.add(new Car(3, "GNG 654","2000", carBrands[2], 6700, "red","Van", false,
                 new Date(), 0, "resources/images/a.jpg",u2));
-        cars.add(new Car(4, "PYT 123","2000", "Toyota", 19000, "red","Hatchback", false,
+        cars.add(new Car(4, "PYT 123","2000", carBrands[3], 19000, "red","Hatchback", false,
                 new Date(), 0, "resources/images/a.jpg",u2));
-        cars.add(new Car(5,"MGT 123","2000", "Toyota", 43000, "red","Crossover", false,
+        cars.add(new Car(5,"MGT 123","2000", carBrands[4], 43000, "red","Crossover", false,
                 new Date(), 0, "resources/images/a.jpg",u3));
-        cars.add(new Car(6, "CFT 123","2000", "Toyota", 5900, "red","Coupe", false,
+        cars.add(new Car(6, "CFT 123","2000", carBrands[5], 5900, "red","Coupe", false,
                 new Date(), 0, "resources/images/a.jpg",u3));
-        cars.add(new Car(7, "TGD 123","2000", "Toyota", 29900, "red","Crossover", false,
+        cars.add(new Car(7, "TGD 123","2000", carBrands[2], 29900, "red","Crossover", false,
                 new Date(), 0, "resources/images/a.jpg",u3));
-        cars.add(new Car(8, "RHI 123","2000", "Toyota", 20000, "red","Convertible", false,
+        cars.add(new Car(8, "RHI 123","2000", carBrands[1], 20000, "red","Convertible", false,
                 new Date(), 0, "resources/images/a.jpg",u1));
-        cars.add(new Car(9, "BPT 123","2000", "Toyota", 52000, "red","Truck", false,
+        cars.add(new Car(9, "BPT 123","2000", carBrands[6], 52000, "red","Truck", false,
                 new Date(), 0, "resources/images/a.jpg",u2));
-        cars.add(new Car(10, "JVT 123","2000", "Toyota", 25000, "red","Sedan", false,
+        cars.add(new Car(10, "JVT 123","2000", carBrands[7], 25000, "red","Sedan", false,
                 new Date(), 0, "resources/images/a.jpg",u2));
 
         System.out.println("=======>>>>data loaded");
