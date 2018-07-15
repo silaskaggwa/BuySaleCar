@@ -10,6 +10,7 @@ public class Car {
     private String brand;
     private double price;
     private String color;
+    private String shape;
     private boolean isSold;
     private Date date;
     private double discount;
@@ -24,14 +25,15 @@ public class Car {
         this.license = license;
     }
 
-    public Car(int id, String license, String model, String brand, double price, String color, boolean isSold, Date date,
-               double discount, String image, User owner) {
+    public Car(int id, String license, String model, String brand, double price, String color, String shape,
+               boolean isSold, Date date, double discount, String image, User owner) {
         this.id = id;
         this.license = license;
         this.model = model;
         this.brand = brand;
         this.price = price;
         this.color = color;
+        this.shape = shape;
         this.isSold = isSold;
 
         this.date = date;
@@ -114,5 +116,13 @@ public class Car {
 
     public User getOwner(){
         return this.owner;
+    }
+
+    public String getShape() {
+        return shape;
+    }
+
+    public void setShape(String shape) {
+        this.shape = shape;
     }
 }
