@@ -15,9 +15,11 @@ public enum DataStorage {
 
     private List<Car> cars = new ArrayList<>();
     private List<User> users = new ArrayList<>();
+    public String[] carBrands = {"Mercedes","BMW","Toyota","Audi","Tesla","Ford","Cadillac","Mazda","Buick",
+            "Chevrolet","Lexus","Other"};
+    public String[] carShapes = {"Sedan","SUV","Van","Hatchback","Truck","Crossover","Coupe","Convertible"};
 
     public void loadDefaultData(){
-
         User u1 = new User(1,"silas", "kaggwa", "silakag@gmail.com",
                 "034234234","1000N St. Maharishi", "silas","12345");
         User u2 = new User(2,"bishwa", "bishwa", "bishwa@gmail.com",
@@ -29,27 +31,28 @@ public enum DataStorage {
         users.add(u2);
         users.add(u3);
 
-        cars.add(new Car(1, "GNG 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "", u1));
-        cars.add(new Car(2, "GYT 543","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "", u1));
-        cars.add(new Car(3, "GNG 654","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
-        cars.add(new Car(4, "PYT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
-        cars.add(new Car(5,"MGT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
-        cars.add(new Car(6, "CFT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
-        cars.add(new Car(7, "TGD 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u3));
-        cars.add(new Car(8, "RHI 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u1));
-        cars.add(new Car(9, "BPT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
-        cars.add(new Car(10, "JVT 123","2000", "Toyota", 20000, "red", false,
-                new Date("2018-07-03"), 0, "",u2));
+        cars.add(new Car(1, "GNG 123","2000", "Toyota", 7400, "red","Sedan", false,
+                new Date(), 0, "resources/images/a.jpg", u1));
+        cars.add(new Car(2, "GYT 543","2000", "Toyota", 23000, "red","SUV", false,
+                new Date(), 0, "resources/images/a.jpg", u1));
+        cars.add(new Car(3, "GNG 654","2000", "Toyota", 6700, "red","Van", false,
+                new Date(), 0, "resources/images/a.jpg",u2));
+        cars.add(new Car(4, "PYT 123","2000", "Toyota", 19000, "red","Hatchback", false,
+                new Date(), 0, "resources/images/a.jpg",u2));
+        cars.add(new Car(5,"MGT 123","2000", "Toyota", 43000, "red","Crossover", false,
+                new Date(), 0, "resources/images/a.jpg",u3));
+        cars.add(new Car(6, "CFT 123","2000", "Toyota", 5900, "red","Coupe", false,
+                new Date(), 0, "resources/images/a.jpg",u3));
+        cars.add(new Car(7, "TGD 123","2000", "Toyota", 29900, "red","Crossover", false,
+                new Date(), 0, "resources/images/a.jpg",u3));
+        cars.add(new Car(8, "RHI 123","2000", "Toyota", 20000, "red","Convertible", false,
+                new Date(), 0, "resources/images/a.jpg",u1));
+        cars.add(new Car(9, "BPT 123","2000", "Toyota", 52000, "red","Truck", false,
+                new Date(), 0, "resources/images/a.jpg",u2));
+        cars.add(new Car(10, "JVT 123","2000", "Toyota", 25000, "red","Sedan", false,
+                new Date(), 0, "resources/images/a.jpg",u2));
 
+        System.out.println("=======>>>>data loaded");
     }
 
     public Car addCar(Car car) throws CarAlreadyExistsException {

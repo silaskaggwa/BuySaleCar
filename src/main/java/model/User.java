@@ -5,12 +5,12 @@ import java.util.List;
 public class User {
     private int id;
     private String firstname;
-    private  String lastName;
+    private String lastName;
     private String email;
     private String phoneNumber;
     private String address;
-    private String userName;
-    private String password;
+    private transient String userName;
+    private transient String password;
 
 
 
