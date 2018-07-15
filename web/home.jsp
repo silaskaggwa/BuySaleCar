@@ -101,7 +101,11 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="btnSearch" type="button" class="btn btn-default">Search</button>
+                        <button id="btnReset" type="button" class="btn btn-default">Reset</button>
+                        <button id="btnSearch" type="button" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            Search
+                        </button>
                     </form>
                 </div>
             </div>

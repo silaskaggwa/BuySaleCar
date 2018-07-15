@@ -32,6 +32,15 @@
             )
             return false;
         });
+        $("#btnReset").click(function (e) {
+            $("#minPrice").val(undefined);
+            $("#maxPrice").val(undefined);
+            $("#brand").val("Any");
+            $("#shape").val("Any");
+            fetchAllCars();
+            return false;
+        });
+
 
         fetchAllCars();
     });
