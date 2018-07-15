@@ -14,11 +14,8 @@ public enum CarService {
         return DataStorage.INSTANCE.getAllCars().stream()
                 .filter(c -> c.getPrice() >= minPrice)
                 .filter(c -> c.getPrice() <= maxPrice)
-                .peek(c -> System.out.println("brand>>> "+c.getBrand()))
                 .filter(c -> Arrays.asList(brands).contains(c.getBrand()))
-                .peek(c -> System.out.println("shape>>> "+c.getShape()))
                 .filter(c -> Arrays.asList(shapes).contains(c.getShape()))
-                .peek(c -> System.out.println("car>>> "+c.getLicense()))
                 .collect(Collectors.toList());
     }
 }
