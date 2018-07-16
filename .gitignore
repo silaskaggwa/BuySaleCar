@@ -18,6 +18,7 @@ build
 *.ipr
 *.iws
 .idea/
+.idea/workspace.xml
 out
 
 # mac
