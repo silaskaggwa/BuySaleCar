@@ -81,3 +81,7 @@ h3.price{
 .color-green {
     color: green;
 }
+
+.error{
+    border: 1px solid red;
+}

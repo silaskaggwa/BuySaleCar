@@ -4,11 +4,11 @@ import exceptions.CarAlreadyExistsException;
 import exceptions.UserAlreadyExistsException;
 import model.Car;
 import model.User;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.*;
 
 public enum DataStorage {
 
@@ -19,6 +19,7 @@ public enum DataStorage {
     public String[] carBrands = {"Mercedes","BMW","Toyota","Audi","Tesla","Ford","Cadillac","Mazda","Buick",
             "Chevrolet","Lexus","Other"};
     public String[] carShapes = {"Sedan","SUV","Van","Hatchback","Truck","Crossover","Coupe","Convertible"};
+    public Map<String, String>  cookieMap = new HashMap<>();
 
     public void loadDefaultData(){
         User u1 = new User(1,"silas", "kaggwa", "silakag@gmail.com",
@@ -31,6 +32,8 @@ public enum DataStorage {
         users.add(u1);
         users.add(u2);
         users.add(u3);
+
+
 
         cars.add(new Car(1, "GNG 123","2000", carBrands[0], 7400, "red","Sedan", false,
                 new Date(), 0, "resources/images/a.jpg", u1));
@@ -72,6 +75,7 @@ public enum DataStorage {
         return user;
     }
 
+
     public Car getCarById(int id){
         for (Car car : cars){
             if (car.getId() == id){
@@ -103,7 +107,8 @@ public enum DataStorage {
 
     public User getUserByUsername(String username){
         for (User user : users){
-            if (user.getUserName() == username){
+            System.out.println(user.getUserName());
+            if (user.getUserName().equals(username)){
                 return user;
             }
         }

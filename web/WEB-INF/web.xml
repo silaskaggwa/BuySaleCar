@@ -22,5 +22,8 @@
         <servlet-name>CarServlet</servlet-name>
         <url-pattern>/get-all-cars</url-pattern>
     </servlet-mapping>
-
+    <context-param>
+        <param-name>file-upload</param-name>
+        <param-value>./resources/images/</param-value>
+    </context-param>
 </web-app>

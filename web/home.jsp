@@ -50,7 +50,7 @@
                         <li ><a href="#">About Us</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Log In</a></li>
+                        <li id="loginMe"><a href="#">Log In</a></li>
                         <li id="Register"><a href="#">Register</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -133,20 +133,55 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="addCarForm">
                             <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Car Model:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="car-model" class="col-form-label">Model:</label>
+                                <input type="text" class="form-control" id="car-model">
                             </div>
                             <div class="form-group">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
+                                <label for="car-brand" class="col-form-label">Brand:</label>
+                                <select id="car-brand">
+                                    <option>Any</option>
+                                    <c:forEach items="${carBrands}" var = "brand">
+                                        <option>${brand}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-price" class="col-form-label">Price:</label>
+                                <input type="number" class="form-control" id="car-price">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-color" class="col-form-label">Color:</label>
+                                <input type="text" class="form-control" id="car-color">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-discount" class="col-form-label">Discount:</label>
+                                <input type="number" class="form-control" id="car-discount">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-image" class="col-form-label">Image:</label>
+                                <input type="file" class="form-control" id="car-image">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-number" class="col-form-label">Number:</label>
+                                <input type="text" class="form-control" id="car-number">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-shape" class="col-form-label">Type:</label>
+                                <select id="car-shape">
+                                    <option>Any</option>
+                                    <c:forEach items="${carShapes}" var = "shape">
+                                        <option>${shape}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </form>
+                        <label class="col-form-label" id="car-add-msg"></label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="model">Close</button>
-                        <button type="button" class="btn btn-primary">Add Car</button>
+                        <button type="button" class="btn btn-primary" id="btnAddCar">Add Car</button>
                     </div>
                 </div>
             </div>
@@ -156,26 +191,77 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="register-form" action="home" method="post">
                             <div class="form-group">
                                 <label for="first-name" class="col-form-label">First Name:</label>
-                                <input type="text" class="form-control" id="first-name">
+                                <input type="text" class="form-control" id="first-name" required>
                             </div>
                             <div class="form-group">
                                 <label for="last-name" class="col-form-label">Last Name:</label>
-                                <textarea class="form-control" id="last-name"></textarea>
+                                <input type="text" class="form-control" id="last-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="text" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number" class="col-form-label">Phone Number:</label>
+                                <input type="text" class="form-control" id="phone-number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="col-form-label">Address:</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-name" class="col-form-label">UserName:</label>
+                                <input type="text" class="form-control" id="user-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pswd" class="col-form-label">Password:</label>
+                                <input type="password" name="password" class="form-control" id="pswd" required>
                             </div>
                         </form>
+                        <label class="col-form-label" id="register-msg"></label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Send message</button>
+                        <button type="button" id="registerbtn" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="loginUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="logindata">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formlogin" action="home" method="post">
+                            <div class="form-group">
+                                <label for="username" class="col-form-label">UserName</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passWord" class="col-form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="passWord" required>
+                            </div>
+                        </form>
+                        <label class="col-form-label" id="login-msg"></label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button"  id="btnSubmit" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>
