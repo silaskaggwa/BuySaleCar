@@ -20,7 +20,111 @@
         //region register user
         $("#Register a").click(function(event){
             event.preventDefault();
+            $("#register-form").show();
+            $("#register-msg").hide();
+            $("#register-form").find("input").val("");
             $("#registerUser").modal('show')
+        });
+
+        $("#registerbtn").click(function (ev) {
+            var firstname = $("#first-name").val();
+            var lastname = $("#last-name").val();
+            var email = $("#email").val();
+            var phoneNumber = $("#phone-number").val();
+            var address = $("#address").val();
+            var usr = $("#user-name").val();
+            var pswd = $("#pswd").val();
+
+            $.ajax({
+                method: 'POST',
+                url: 'register',
+                data: {
+                    "id": Math.floor(Math.random() * 1000),
+                    "firstName": firstname,
+                    "lastName": lastname,
+                    "email": email,
+                    "phoneNumber": phoneNumber,
+                    "address": address,
+                    "usr": usr,
+                    "pswd": pswd
+                },
+                success: function (response) {
+                    debugger;
+                    $("#register-form").hide();
+                    $("#register-msg").show();
+                    if (response == "true") {
+                        $("#register-msg").html("register success")
+                    }
+                    else {
+                        $("#register-msg").html("registration failed")
+                    }
+                    setTimeout(function () {
+                        $("#registerUser").modal('hide')
+                    }, 1000);
+                },
+                error: function (error) {
+                    $("#register-form").hide();
+                    $("#register-msg").show();
+                    $("#register-msg").html("registration failed")
+                    setTimeout(function () {
+                        $("#registerUser").modal('hide')
+                    }, 1000);
+                }
+            });
+        });
+        //region login user
+
+        $("#loginMe a").click(function (evnt) {
+            evnt.preventDefault();
+            $("#loginUser").modal('show')
+            $("#formlogin").show();
+            $("#login-msg").hide();
+
+        });
+
+
+
+        /*submit login
+        $("#btnSubmit").click(function (ev) {
+            $("#formlogin").submit();
+
+        }); */
+
+        $("#btnSubmit").click(function (ev) {
+            var uName = $("#username").val();
+            var pwd = $("#passWord").val();
+            $.ajax({
+                method: 'POST',
+                url: 'home',
+                data: {
+                   "userName": uName,
+                    "passWord":pwd
+                },
+                success: function (response) {
+                    debugger;
+                    $("#formlogin").hide();
+                    $("#login-msg").show();
+                    if(response == "true") {
+                        $("#login-msg").html("Login success")
+                    }
+                    else
+                    {
+                        $("#login-msg").html("Login failed")
+                    }
+                   setTimeout(function () {
+                       $("#loginUser").modal('hide')
+                   }, 1000);
+                },
+                error: function (error) {
+                    $("#formlogin").hide();
+                    $("#login-msg").show();
+                    $("#login-msg").html("Login failed")
+                    setTimeout(function () {
+                        $("#loginUser").modal('hide')
+                    }, 1000);
+                }
+            });
+
         });
 
         $("#btnSearch").click(function (e) {
