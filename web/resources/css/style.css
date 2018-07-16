@@ -60,3 +60,24 @@ footer{
 .filter {
     margin: 15px;
 }
+#carInfoModal .img {
+    overflow: auto;
+}
+
+.dollar {
+    font-size: 1.5em;
+}
+h3.price{
+    margin: 0;
+}
+.owner-info {
+    margin: 18px;
+}
+
+.owner-info .glyphicon {
+    margin-right: 6px;
+}
+
+.color-green {
+    color: green;
+}

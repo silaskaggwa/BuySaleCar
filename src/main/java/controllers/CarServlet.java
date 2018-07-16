@@ -47,5 +47,6 @@ public class CarServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         out.print(new Gson().toJson(CarService.INSTANCE.filterCars(minPriceQuery, maxPriceQuery, brandsQuery, shapesQuery)));
         out.flush();
+
     }
 }

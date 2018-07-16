@@ -180,6 +180,65 @@
                 </div>
             </div>
         </div>
+
+        <div id="carInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 img">
+                                <img src="resources/images/b.jpg" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <h2 id="brandModel">Mercedes CLK, 2006</h2>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <th>Plate</th>
+                                                <td>UAW 805B</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Color</th>
+                                                <td>Black</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Shape</th>
+                                                <td>SUV</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <h3 class="price"><span class="label label-success"><span class="dollar">$</span> 30000</span></h3>
+                                    <div class="owner-info">
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-user color-green" aria-hidden="true"></span>
+                                            Silas Kaggwa
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-envelope color-green" aria-hidden="true"></span>
+                                            silakag@gmail.com
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-earphone color-green" aria-hidden="true"></span>
+                                            +1 641 954 6999
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-map-marker color-green" aria-hidden="true"></span>
+                                            Fairfeild, Iowa
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
