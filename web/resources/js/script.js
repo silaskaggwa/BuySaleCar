@@ -208,7 +208,7 @@
                 method: 'GET',
                 url: 'persistentlogin',
                 success: function (response) {
-                    performLoginSuccess(response);
+                    performLoginSuccess(response, "persistent");
                 },
                 error: function (error) {
 
@@ -321,11 +321,13 @@
     }
 //#endregion
 
-    function performLoginSuccess(response){
+    function performLoginSuccess(response, caller){
         debugger;
 
         if(response == "" || response == "false") {
-           alert("invalid login credentials");
+            if(typeof caller == "undefined") {
+                alert("invalid login credentials");
+            }
         }
         else
         {
