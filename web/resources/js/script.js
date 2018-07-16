@@ -236,6 +236,7 @@
     });
 
     function loadCarInfoModal(car){
+        $('#carImage').attr('src',car.image);
         $('#brandModel').text(car.brand +", "+car.model);
         $('#licenseNo').text(car.license);
         $('#carColor').text(car.color);
@@ -243,7 +244,7 @@
         $('#carPrice').text(car.price);
         $('#ownerName').text(car.owner.firstname+" "+car.owner.lastName);
         $('#ownerEmail').text(car.owner.email);
-        $('#ownerPhone').text(car.owner.phone);
+        $('#ownerPhone').text(car.owner.phoneNumber);
         $('#ownerAddress').text(car.owner.address);
     }
 
@@ -258,7 +259,7 @@
                     </div>
                    <div class="info-wrapper">
                        <h4>${car.brand +', '+ car.model}</h4>
-                       <h4>${car.price}</h4>
+                       <h4>$ ${car.price}</h4>
                        <button id="${car.id}" type="button" class="btn btn-success car-info">View</button>
                    </div>
                 </div>`;
