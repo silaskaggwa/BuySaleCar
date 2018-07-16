@@ -5,10 +5,7 @@ import model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -22,12 +19,24 @@ public class LoginServlet extends HttpServlet {
             String password = req.getParameter("passWord");
 
             if( username != null && password != null && !username.isEmpty() && !password.isEmpty()) {
+
+
                 User optUser = DataStorage.INSTANCE.getUserByUsernameAndPw(username, password);
 
                 if (optUser != null) {
                     HttpSession sess = req.getSession();
                     sess.setAttribute("userName", username);
-                    out.print("true");
+
+                    String rememberMe = req.getParameter("rememberMe");
+                    if(rememberMe != null && rememberMe != "" && rememberMe.equals("true")){
+                        Cookie cookie = new Cookie("persistentlogintoken", req.getSession().getId());
+                        cookie.setMaxAge(3600); //in seconds
+                        resp.addCookie(cookie);
+
+                        DataStorage.INSTANCE.cookieMap.put(cookie.getValue(), username);
+                    }
+
+                    out.print(username);
 //
                 } else {
                   //  req.setAttribute("msg", "Invalid Credentials");

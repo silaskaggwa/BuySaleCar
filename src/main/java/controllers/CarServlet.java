@@ -58,85 +58,89 @@ public class CarServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PrintWriter out = resp.getWriter();
+        if( req.getSession().getAttribute("userName") != null){
+            String filePath = getServletContext().getRealPath(getServletContext().getInitParameter("file-upload"));
 
-        String filePath = getServletContext().getRealPath(getServletContext().getInitParameter("file-upload"));
+            // System.out.println("filePath -->"+filePath);
+            boolean isMultipart;
+            int maxFileSize = 5000 * 1024;
+            int maxMemSize = 4000 * 1024;
+            File file ;
 
-       // System.out.println("filePath -->"+filePath);
-        boolean isMultipart;
-        int maxFileSize = 50 * 1024;
-        int maxMemSize = 4 * 1024;
-        File file ;
+            isMultipart = ServletFileUpload.isMultipartContent(req);
 
-        isMultipart = ServletFileUpload.isMultipartContent(req);
+            if (isMultipart){
+                DiskFileItemFactory factory = new DiskFileItemFactory();
 
-        if (isMultipart){
-            DiskFileItemFactory factory = new DiskFileItemFactory();
+                // maximum size that will be stored in memory
+                factory.setSizeThreshold(maxMemSize);
 
-            // maximum size that will be stored in memory
-            factory.setSizeThreshold(maxMemSize);
+                // Location to save data that is larger than maxMemSize.
+                factory.setRepository(new File("./"));
 
-            // Location to save data that is larger than maxMemSize.
-            factory.setRepository(new File("./"));
+                // Create a new file upload handler
+                ServletFileUpload upload = new ServletFileUpload(factory);
 
-            // Create a new file upload handler
-            ServletFileUpload upload = new ServletFileUpload(factory);
+                // maximum file size to be uploaded.
+                upload.setSizeMax( maxFileSize );
 
-            // maximum file size to be uploaded.
-            upload.setSizeMax( maxFileSize );
+                try {
+                    // Parse the request to get file items.
+                    List fileItems = upload.parseRequest(req);
 
-            try {
-                // Parse the request to get file items.
-                List fileItems = upload.parseRequest(req);
+                    // Process the uploaded file items
+                    Iterator i = fileItems.iterator();
+                    Map<String, String> map = new HashMap<>();
+                    while ( i.hasNext () ) {
+                        FileItem fi = (FileItem)i.next();
+                        if ( !fi.isFormField () ) {
+                            // Get the uploaded file parameters
+                            //String fieldName = fi.getFieldName();
+                            String fileName = fi.getName() +"_"+new Date().getDate()+"_"+new Date().getTime();
+                            // String contentType = fi.getContentType();
+                            // boolean isInMemory = fi.isInMemory();
+                            // long sizeInBytes = fi.getSize();
 
-                // Process the uploaded file items
-                Iterator i = fileItems.iterator();
-                Map<String, String> map = new HashMap<>();
-                while ( i.hasNext () ) {
-                    FileItem fi = (FileItem)i.next();
-                    if ( !fi.isFormField () ) {
-                        // Get the uploaded file parameters
-                        //String fieldName = fi.getFieldName();
-                        String fileName = fi.getName() +"_"+new Date().getDate()+"_"+new Date().getTime();
-                       // String contentType = fi.getContentType();
-                       // boolean isInMemory = fi.isInMemory();
-                       // long sizeInBytes = fi.getSize();
+                            // Write the file
+                            if( fileName.lastIndexOf("\\") >= 0 ) {
+                                file = new File( filePath + fileName.substring( fileName.lastIndexOf("\\"))) ;
+                            } else {
+                                file = new File( filePath + fileName.substring(fileName.lastIndexOf("\\")+1)) ;
+                            }
 
-                        // Write the file
-                        if( fileName.lastIndexOf("\\") >= 0 ) {
-                            file = new File( filePath + fileName.substring( fileName.lastIndexOf("\\"))) ;
-                        } else {
-                            file = new File( filePath + fileName.substring(fileName.lastIndexOf("\\")+1)) ;
+                            System.out.println("Abs path = "+file.getAbsolutePath());
+
+                            fi.write( file ) ;
+
+                            System.out.println(">>>> "+ filePath);
+                            //   out.println("Uploaded Filename: " + fileName + "<br>");*/
+                            map.put("image", "resources/images/"+file.getName());
                         }
+                        else{
+                            String value = fi.getString("UTF-8");
+                            String names = fi.getFieldName();
+                            map.put(names, value);
 
-                        System.out.println("Abs path = "+file.getAbsolutePath());
-
-                        fi.write( file ) ;
-
-                        System.out.println(">>>> "+ filePath);
-                     //   out.println("Uploaded Filename: " + fileName + "<br>");*/
-                        map.put("image", "resources/images/"+file.getName());
+                        }
                     }
-                    else{
-                        String value = fi.getString("UTF-8");
-                        String names = fi.getFieldName();
-                        map.put(names, value);
 
-                    }
+                    // System.out.println(map);
+                    User user = DataStorage.INSTANCE.getUserByUsername(req.getSession().getAttribute("userName").toString());
+                    Car newCar =   CarService.INSTANCE.createCar(map,user);
+
+
+                    resp.setContentType("application/json");
+                    resp.setCharacterEncoding("UTF-8");
+                    out.print(new Gson().toJson(newCar));
+                    out.flush();
+
+                } catch(Exception ex) {
+                    System.out.println(ex);
                 }
-
-               // System.out.println(map);
-                User user = DataStorage.INSTANCE.getUserByUsername("kiran");
-                Car newCar =   CarService.INSTANCE.createCar(map,user);
-
-                PrintWriter out = resp.getWriter();
-                resp.setContentType("application/json");
-                resp.setCharacterEncoding("UTF-8");
-                out.print(new Gson().toJson(newCar));
-                out.flush();
-
-            } catch(Exception ex) {
-                System.out.println(ex);
             }
         }
+        out.write("");
+
     }
 }
