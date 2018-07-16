@@ -97,7 +97,7 @@
             var pwd = $("#passWord").val();
             $.ajax({
                 method: 'POST',
-                url: 'home',
+                url: 'login',
                 data: {
                    "userName": uName,
                     "passWord":pwd
