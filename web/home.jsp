@@ -47,7 +47,7 @@
                     <ul class="nav navbar-nav">
                         <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
                         <li id="AddCar" class="<%=request.getSession().getAttribute("userName") == null?"none":"" %>"><a href="#">Add Car</a></li>
-                        <li ><a href="#">About Us</a></li>
+                       <!-- <li ><a href="#">About Us</a></li> -->
                     </ul>
                     <ul class="nav navbar-nav navbar-right log-in <%=request.getSession().getAttribute("userName") == null?"":"none" %>">
                         <li id="loginMe"><a href="#">Log In</a></li>
