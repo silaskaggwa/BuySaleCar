@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     font-family: "Berlin Sans FB Demi";
+    box-sizing: border-box;
 }
 #wrapper{
     max-width: 1000px;
@@ -9,7 +10,7 @@
     background-color: burlywood;
 }
 #content-wrapper{
-overflow: auto;
+    overflow: auto;
 }
 #aside{
     width:30%;
@@ -25,7 +26,7 @@ overflow: auto;
 }
 footer{
     text-align: center;
-background-color: brown;
+    background-color: brown;
     height: 30px;
     color:white;
     vertical-align: middle;
@@ -45,4 +46,20 @@ background-color: brown;
     height:100px ;
     width: 100%;
     text-align: center;
+}
+
+#top-loader {
+    border-radius: 0;
+    display: none;
+}
+
+#top-loader .progress-bar{
+    width: 100%;
+}
+
+.filter {
+    margin: 15px;
+}
+.error{
+    border: 1px solid red;
 }

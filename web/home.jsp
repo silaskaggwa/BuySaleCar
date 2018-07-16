@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>BuyAndSale</title>
@@ -30,162 +31,91 @@
 <body>
     <div id="wrapper">
         <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li id="AddCar"><a href="#">Add Car</a></li>
-                <li ><a href="#">About Us</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Log In</a></li>
-                <li id="Register"><a href="#">Register</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li id="AddCar"><a href="#">Add Car</a></li>
+                        <li ><a href="#">About Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Log In</a></li>
+                        <li id="Register"><a href="#">Register</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
         <div id="content-wrapper">
-            <div id="aside"></div>
+            <div id="aside">
+                <div class="filter">
+                    <h2>Filter</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="minPrice">Min</label>
+                                    <input type="number" class="form-control" id="minPrice" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="maxPrice">Max</label>
+                                    <input type="number" class="form-control" id="maxPrice" placeholder="~">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="brand">Brand</label>
+                                    <select id="brand" multiple class="form-control">
+                                        <option selected>Any</option>
+                                        <c:forEach items="${carBrands}" var="brand">
+                                            <option>${brand}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="shape">Shape</label>
+                                    <select id="shape" multiple class="form-control">
+                                        <option selected>Any</option>
+                                        <c:forEach items="${carShapes}" var="shape">
+                                            <option>${shape}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btnReset" type="button" class="btn btn-default">Reset</button>
+                        <button id="btnSearch" type="button" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
             <div id="contents">
-                <div id="content">
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/a.jpg" alt=""></img>
-                        </div>
-                       <div class="info-wrapper">
-                           <h4>Example heading</h4>
-                           <h4>Example heading</h4>
-                           <button type="button" class="btn btn-success">View owner</button>
-                           <div class="owner-info-wrapper">
-
-                           </div>
-                       </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/a.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/b.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/c.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/b.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/a.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/c.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/a.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="car-info-wrapper">
-                        <div class="image-wrapper">
-                            <img src="resources/images/b.jpg" alt=""></img>
-                        </div>
-                        <div class="info-wrapper">
-                            <h4>Example heading</h4>
-                            <h4>Example heading</h4>
-                            <button type="button" class="btn btn-success">Success</button>
-                            <div class="owner-info-wrapper">
-
-                            </div>
-                        </div>
-
+                <div class="progress" id="top-loader">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
+                <div id="content"></div>
             </div>
         </div>
         <footer>
@@ -203,20 +133,55 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="addCarForm">
                             <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Car Model:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="car-model" class="col-form-label">Model:</label>
+                                <input type="text" class="form-control" id="car-model">
                             </div>
                             <div class="form-group">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
+                                <label for="car-brand" class="col-form-label">Brand:</label>
+                                <select id="car-brand">
+                                    <option>Any</option>
+                                    <c:forEach items="${carBrands}" var = "brand">
+                                        <option>${brand}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-price" class="col-form-label">Price:</label>
+                                <input type="number" class="form-control" id="car-price">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-color" class="col-form-label">Color:</label>
+                                <input type="text" class="form-control" id="car-color">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-discount" class="col-form-label">Discount:</label>
+                                <input type="number" class="form-control" id="car-discount">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-image" class="col-form-label">Image:</label>
+                                <input type="file" class="form-control" id="car-image">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-number" class="col-form-label">Number:</label>
+                                <input type="text" class="form-control" id="car-number">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-shape" class="col-form-label">Type:</label>
+                                <select id="car-shape">
+                                    <option>Any</option>
+                                    <c:forEach items="${carShapes}" var = "shape">
+                                        <option>${shape}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </form>
+                        <label class="col-form-label" id="car-add-msg"></label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="model">Close</button>
-                        <button type="button" class="btn btn-primary">Add Car</button>
+                        <button type="button" class="btn btn-primary" id="btnAddCar">Add Car</button>
                     </div>
                 </div>
             </div>
