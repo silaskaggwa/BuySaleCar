@@ -219,6 +219,23 @@
                 }
             });
         }
+
+        $("#logout").click(function(e){
+            e.preventDefault();
+            $.ajax({
+                method: 'GET',
+                url: 'logout',
+                success: function (response) {
+                    $("#loginName").html("");
+                    $(".log-in").removeClass("none");
+                    $("#AddCar").addClass("none");
+                    $(".log-out").addClass("none");
+                    $
+                },
+                error: function (error) {
+                }
+            });
+        });
     });
 
     function loadCarInfoModal(car){
