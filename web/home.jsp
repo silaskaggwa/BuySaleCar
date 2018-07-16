@@ -279,24 +279,24 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6 img">
-                                <img src="resources/images/b.jpg" alt="">
+                                <img id="carImage" src="resources/images/b.jpg" alt="Car image">
                             </div>
                             <div class="col-md-6">
-                                <h2 id="brandModel">Mercedes CLK, 2006</h2>
+                                <h2 id="brandModel">Loading...</h2>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped">
                                         <tbody>
                                             <tr>
                                                 <th>Plate</th>
-                                                <td id="licenseNo">UAW 805B</td>
+                                                <td id="licenseNo">Loading...</td>
                                             </tr>
                                             <tr>
                                                 <th>Color</th>
-                                                <td id="carColor">Black</td>
+                                                <td id="carColor">Loading...</td>
                                             </tr>
                                             <tr>
                                                 <th>Shape</th>
-                                                <td id="carShape">SUV</td>
+                                                <td id="carShape">Loading...</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -305,25 +305,25 @@
                                     <h3 class="price">
                                         <span class="label label-success">
                                             <span class="dollar">$</span>
-                                            <span id="carPrice">30000</span>
+                                            <span id="carPrice">Loading...</span>
                                         </span>
                                     </h3>
                                     <div class="owner-info">
                                         <div class="row">
                                             <span class="glyphicon glyphicon-user color-green" aria-hidden="true"></span>
-                                            <span id="ownerName">Silas Kaggwa</span>
+                                            <span id="ownerName">Loading...</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-envelope color-green" aria-hidden="true"></span>
-                                            <span id="ownerEmail">silakag@gmail.com</span>
+                                            <span id="ownerEmail">Loading...</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-earphone color-green" aria-hidden="true"></span>
-                                            <span id="ownerPhone">+1 641 954 6999</span>
+                                            <span id="ownerPhone">Loading...</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-map-marker color-green" aria-hidden="true"></span>
-                                            <span id="ownerAddress">Fairfeild, Iowa</span>
+                                            <span id="ownerAddress">Loading...</span>
                                         </div>
                                     </div>
                                 </div>
