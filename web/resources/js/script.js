@@ -1,4 +1,3 @@
-
 (function () {
     "use strict";
     let isLoggedIn = false;
@@ -32,50 +31,55 @@
         });
 
         $("#registerbtn").click(function (ev) {
-            var firstname = $("#first-name").val();
-            var lastname = $("#last-name").val();
-            var email = $("#email").val();
-            var phoneNumber = $("#phone-number").val();
-            var address = $("#address").val();
-            var usr = $("#user-name").val();
-            var pswd = $("#pswd").val();
 
-            $.ajax({
-                method: 'POST',
-                url: 'register',
-                data: {
-                    "id": Math.floor(Math.random() * 1000),
-                    "firstName": firstname,
-                    "lastName": lastname,
-                    "email": email,
-                    "phoneNumber": phoneNumber,
-                    "address": address,
-                    "usr": usr,
-                    "pswd": pswd
-                },
-                success: function (response) {
-                    debugger;
-                    $("#register-form").hide();
-                    $("#register-msg").show();
-                    if (response == "true") {
-                        $("#register-msg").html("register success")
-                    }
-                    else {
+            if (validateRegisterModal()) {
+                const firstname = $("#first-name").val();
+                const lastname = $("#last-name").val();
+                const email = $("#email").val();
+                const phoneNumber = $("#phone-number").val();
+                const address = $("#address").val();
+                const usr = $("#user-name").val();
+                const pswd = $("#pswd").val();
+
+                $.ajax({
+                    method: 'POST',
+                    url: 'register',
+                    data: {
+                        "id": Math.floor(Math.random() * 1000),
+                        "firstName": firstname,
+                        "lastName": lastname,
+                        "email": email,
+                        "phoneNumber": phoneNumber,
+                        "address": address,
+                        "usr": usr,
+                        "pswd": pswd
+                    },
+                    success: function (response) {
+                        debugger;
+                        $("#register-form").hide();
+                        $("#register-msg").show();
+                        if (response == "true") {
+                            $("#register-msg").html("register success")
+                        }
+                        else {
+                            $("#register-msg").html("registration failed")
+                        }
+                        setTimeout(function () {
+                            $("#registerUser").modal('hide')
+                        }, 1000);
+                    },
+                    error: function (error) {
+                        $("#register-form").hide();
+                        $("#register-msg").show();
                         $("#register-msg").html("registration failed")
+                        setTimeout(function () {
+                            $("#registerUser").modal('hide')
+                        }, 1000);
                     }
-                    setTimeout(function () {
-                        $("#registerUser").modal('hide')
-                    }, 1000);
-                },
-                error: function (error) {
-                    $("#register-form").hide();
-                    $("#register-msg").show();
-                    $("#register-msg").html("registration failed")
-                    setTimeout(function () {
-                        $("#registerUser").modal('hide')
-                    }, 1000);
-                }
-            });
+                });
+            }else{
+                console.log("Registration inputs invalid!");
+            }
         });
         //region login user
 
@@ -285,6 +289,20 @@
         return isValidate;
     }
 
+    function validateRegisterModal(){
+        var isValid = true;
+        $("#registerUser :input").not(":button").each(function(index, value){
+            var itemValue = $(this).val().trim();
+            if(typeof itemValue == "undefined" || itemValue.length <=0){
+                isValid = false;
+                $(this).addClass("error");
+            }else {
+                $(this).removeClass("error");
+            }
+        });
+        return isValid;
+    }
+
     function PerformAddCarOnSuccess(data){
 
     }
@@ -312,7 +330,7 @@
         }
         else
         {
-            $("#loginName").html("Hellow "+ response);
+            $("#loginName").html(`<a>Hello ${response}</a>`);
             $(".log-in").addClass("none");
             $("#AddCar").removeClass("none");
             $(".log-out").removeClass("none");
@@ -322,13 +340,13 @@
 
     }
 
-})();
-
-$(function(){
-    $("#addCarModal").find(":input").keyup(function(){
-        debugger;
-        if($(this).val().trim().length >0 && $(this).hasClass("error")){
-            $(this).removeClass("error");
-        }
+    $(function(){
+        $("#addCarModal").find(":input").keyup(function(){
+            debugger;
+            if($(this).val().trim().length >0 && $(this).hasClass("error")){
+                $(this).removeClass("error");
+            }
+        });
     });
-});
+
+})();
