@@ -212,7 +212,7 @@
                 method: 'GET',
                 url: 'persistentlogin',
                 success: function (response) {
-                    performLoginSuccess(response);
+                    performLoginSuccess(response, "persistent");
                 },
                 error: function (error) {
 
@@ -341,9 +341,10 @@
 
     function performLoginSuccess(response){
 
-
         if(response == "" || response == "false") {
-           alert("invalid login credentials");
+            if(typeof caller == "undefined") {
+                alert("invalid login credentials");
+            }
         }
         else
         {
