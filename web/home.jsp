@@ -141,7 +141,6 @@
                             <div class="form-group">
                                 <label for="car-brand" class="col-form-label">Brand:</label>
                                 <select id="car-brand">
-                                    <option>Any</option>
                                     <c:forEach items="${carBrands}" var = "brand">
                                         <option>${brand}</option>
                                     </c:forEach>
@@ -170,7 +169,6 @@
                             <div class="form-group">
                                 <label for="car-shape" class="col-form-label">Type:</label>
                                 <select id="car-shape">
-                                    <option>Any</option>
                                     <c:forEach items="${carShapes}" var = "shape">
                                         <option>${shape}</option>
                                     </c:forEach>
