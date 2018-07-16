@@ -55,7 +55,7 @@
                         "pswd": pswd
                     },
                     success: function (response) {
-                        debugger;
+
                         $("#register-form").hide();
                         $("#register-msg").show();
                         if (response == "true") {
@@ -111,7 +111,7 @@
                     "rememberMe": $("#rememberMe").prop("checked"),
                 },
                 success: function (response) {
-                    debugger;
+
                    performLoginSuccess(response);
                 },
                 error: function (error) {
@@ -340,7 +340,7 @@
 //#endregion
 
     function performLoginSuccess(response){
-        debugger;
+
 
         if(response == "" || response == "false") {
            alert("invalid login credentials");
@@ -359,7 +359,7 @@
 
     $(function(){
         $("#addCarModal").find(":input").keyup(function(){
-            debugger;
+
             if($(this).val().trim().length >0 && $(this).hasClass("error")){
                 $(this).removeClass("error");
             }

@@ -6,20 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f3e8d30-b37c-4928-b0c4-6425f25fb497" name="Default" comment="">
-<<<<<<< HEAD
+    <list default="true" id="41bfda38-6753-44ac-82f9-13e5756dcf0b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
       <change beforePath="$PROJECT_DIR$/web/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/js/script.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
       <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -39,12 +28,6 @@
                 <element signature="e#10914#10921#1#HTML" expanded="true" />
                 <element signature="e#14079#14086#1#HTML" expanded="true" />
               </folding>
-=======
-      <file leaf-file-name="PersistentLoginServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PersistentLoginServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -52,61 +35,7 @@
       <file leaf-file-name="CarServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CarServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="128" column="123" selection-start-line="128" selection-start-column="123" selection-end-line="128" selection-end-column="123" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#doGet#0;class#CarServlet#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogoutServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpSession.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpSession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CarServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-962">
+            <state relative-caret-position="457">
               <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,15 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/resources/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2738">
-              <caret line="306" column="36" lean-forward="true" selection-start-line="306" selection-start-column="36" selection-end-line="306" selection-end-column="36" />
-=======
-            <state relative-caret-position="110">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="47" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+            <state relative-caret-position="242">
+              <caret line="341" column="32" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="32" />
               <folding>
                 <element signature="e#7792#8294#0" />
                 <element signature="e#8415#8938#0" />
@@ -137,19 +62,11 @@
       <file leaf-file-name="LogoutServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-=======
-            <state relative-caret-position="98">
-              <caret line="250" column="41" lean-forward="true" selection-start-line="250" selection-start-column="41" selection-end-line="250" selection-end-column="41" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
-                <element signature="e#8230#8831#0" />
-                <element signature="e#7792#8294#0" />
-                <element signature="e#8415#8938#0" />
-                <element signature="e#11290#11554#0" />
+                <element signature="imports" expanded="true" />
               </folding>
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
             </state>
           </provider>
         </entry>
@@ -165,45 +82,10 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>register</find>
-      <find>top</find>
-      <find>debugger</find>
-<<<<<<< HEAD
-      <find>alert</find>
-      <find>found</find>
-      <find>registerUser</find>
-      <find>hello</find>
-      <find>logo</find>
-      <find>hellow</find>
-      <find>regis</find>
-      <find>validate</find>
       <find>invalid</find>
-=======
-      <find>addcar</find>
-      <find>persis</find>
-      <find>addCa</find>
-      <find>car</find>
-      <find>none</find>
-      <find>AddCar</find>
-      <find>performLoginSuccess</find>
-      <find>get</find>
-      <find>fetchAllCars</find>
-      <find>carsDisplayed</find>
-      <find>validateAddCarModal</find>
-      <find>login</find>
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+      <find>regis</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,32 +94,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/js/script.js" />
-        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/services/CarService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/PersistentLoginServlet.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/controllers/HomeServlet.java" />
-        <option value="$PROJECT_DIR$/web/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/CarServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastorage/DataStorage.java" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/web/resources/js/script.js" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/datastorage/DataStorage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/HomeServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/web/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/CarServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/web/resources/js/script.js" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
       </list>
     </option>
   </component>
@@ -488,19 +346,12 @@
       <workItem from="1531510290804" duration="15034000" />
       <workItem from="1531749838608" duration="6789000" />
       <workItem from="1531759772524" duration="734000" />
-<<<<<<< HEAD
-      <workItem from="1531760933640" duration="3038000" />
-=======
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+      <workItem from="1531760933640" duration="3584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="65525000" />
-=======
-    <option name="totallyTimeSpent" value="75907000" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+    <option name="totallyTimeSpent" value="267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -517,28 +368,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="8" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
-=======
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22416534" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32848486" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.68969697" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32969698" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
-=======
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="8" side_tool="true" />
@@ -583,21 +423,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastorage/DataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/CarAlreadyExistsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -605,8 +434,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
     <entry file="file://$PROJECT_DIR$/web/resources/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -819,13 +646,6 @@
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -870,33 +690,15 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastorage/DataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="478">
           <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
         </state>
@@ -909,76 +711,28 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-=======
-        <state relative-caret-position="264">
-          <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpSession.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="15">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-=======
-        <state relative-caret-position="176">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-=======
-        <state relative-caret-position="153">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="89">
           <caret line="191" column="48" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="48" />
           <folding>
             <element signature="e#7163#7170#1#HTML" expanded="true" />
             <element signature="e#10914#10921#1#HTML" expanded="true" />
             <element signature="e#14079#14086#1#HTML" expanded="true" />
-=======
-        <state relative-caret-position="98">
-          <caret line="250" column="41" lean-forward="true" selection-start-line="250" selection-start-column="41" selection-end-line="250" selection-end-column="41" />
-          <folding>
-            <element signature="e#8230#8831#0" />
-            <element signature="e#7792#8294#0" />
-            <element signature="e#8415#8938#0" />
-            <element signature="e#11290#11554#0" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2738">
-          <caret line="306" column="36" lean-forward="true" selection-start-line="306" selection-start-column="36" selection-end-line="306" selection-end-column="36" />
-          <folding>
-            <element signature="e#7792#8294#0" />
-            <element signature="e#8415#8938#0" />
-            <element signature="e#9000#9706#0" />
-            <element signature="e#10261#10525#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -988,17 +742,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CarServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-962">
+        <state relative-caret-position="457">
           <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
->>>>>>> bed572493466c6fcafec762e87ba4c08c62d4c3d
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="341" column="32" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="32" />
+          <folding>
+            <element signature="e#7792#8294#0" />
+            <element signature="e#8415#8938#0" />
+            <element signature="e#9000#9706#0" />
+            <element signature="e#10261#10525#0" />
+          </folding>
         </state>
       </provider>
     </entry>
