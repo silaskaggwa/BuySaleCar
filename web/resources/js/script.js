@@ -1,6 +1,7 @@
+
 (function () {
     "use strict";
-
+    let isLoggedIn = false;
     let carsDisplayed = [];
 
     $(function () {
@@ -95,37 +96,22 @@
         }); */
 
         $("#btnSubmit").click(function (ev) {
-            var uName = $("#username").val();
-            var pwd = $("#passWord").val();
+            var uName = $("#username").val().trim();
+            var pwd = $("#passWord").val().trim();
             $.ajax({
                 method: 'POST',
-                url: 'home',
+                url: 'login',
                 data: {
                    "userName": uName,
-                    "passWord":pwd
+                    "passWord":pwd,
+                    "rememberMe": $("#rememberMe").prop("checked"),
                 },
                 success: function (response) {
                     debugger;
-                    $("#formlogin").hide();
-                    $("#login-msg").show();
-                    if(response == "true") {
-                        $("#login-msg").html("Login success")
-                    }
-                    else
-                    {
-                        $("#login-msg").html("Login failed")
-                    }
-                   setTimeout(function () {
-                       $("#loginUser").modal('hide')
-                   }, 1000);
+                   performLoginSuccess(response);
                 },
                 error: function (error) {
-                    $("#formlogin").hide();
-                    $("#login-msg").show();
-                    $("#login-msg").html("Login failed")
-                    setTimeout(function () {
-                        $("#loginUser").modal('hide')
-                    }, 1000);
+                    alert("invalid login credentials");
                 }
             });
 
@@ -190,6 +176,7 @@
                             $("#car-add-msg").html("Car added Successfully");
                             $("#addCarModal").find("form").hide();
                             $("#addCarModal").find("label#car-add-msg").show();
+                            carsDisplayed.push(response);
                             setTimeout(function () {
                                 $('#addCarModal').modal('hide');
                                 $("#addCarModal").find(":input").not(":button").val("");
@@ -221,15 +208,10 @@
                 method: 'GET',
                 url: 'persistentlogin',
                 success: function (response) {
-                    if(typeof response != "undefined" && response.length >0 && response != "false"){
-                        alert("Login with username "+response+" found");
-                    }
-                    else{
-                        alert("persistent login failed");
-                    }
+                    performLoginSuccess(response);
                 },
                 error: function (error) {
-                    alert("persistent login failed");
+
                 }
             });
         }
@@ -322,4 +304,31 @@
     }
 //#endregion
 
+    function performLoginSuccess(response){
+        debugger;
+
+        if(response == "" || response == "false") {
+           alert("invalid login credentials");
+        }
+        else
+        {
+            $("#loginName").html("Hellow "+ response);
+            $(".log-in").addClass("none");
+            $("#AddCar").removeClass("none");
+            $(".log-out").removeClass("none");
+            $("#formlogin").find(":input").val("");
+            $("#loginUser").modal('hide')
+        }
+
+    }
+
 })();
+
+$(function(){
+    $("#addCarModal").find(":input").keyup(function(){
+        debugger;
+        if($(this).val().trim().length >0 && $(this).hasClass("error")){
+            $(this).removeClass("error");
+        }
+    });
+});

@@ -46,12 +46,16 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li id="AddCar"><a href="#">Add Car</a></li>
+                        <li id="AddCar" class="<%=request.getSession().getAttribute("userName") == null?"none":"" %>"><a href="#">Add Car</a></li>
                         <li ><a href="#">About Us</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right log-in <%=request.getSession().getAttribute("userName") == null?"":"none" %>">
                         <li id="loginMe"><a href="#">Log In</a></li>
                         <li id="Register"><a href="#">Register</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right log-out <%=request.getSession().getAttribute("userName") == null?"none":"" %>" >
+                        <li id="loginName">${userName}</li>
+                        <li id="logout"><a href="#">Log out</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -253,6 +257,10 @@
                             <div class="form-group">
                                 <label for="passWord" class="col-form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="passWord" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rememberMe" class="col-form-label">Remember Me:</label>
+                                <input type="checkbox" name="rememberMe"  id="rememberMe">
                             </div>
                         </form>
                         <label class="col-form-label" id="login-msg"></label>
