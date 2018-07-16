@@ -86,8 +86,10 @@ public enum DataStorage {
     }
 
     private List<Car> reverseList(List<Car> l) {
-        Collections.reverse(l);
-        return l;
+        List<Car> newList = new ArrayList<>();
+        newList.addAll(l);
+        Collections.reverse(newList);
+        return newList;
     }
 
     public User getUserById(int id){
