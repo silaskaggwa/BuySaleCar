@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-    font-family: "Berlin Sans FB Demi";
+    font-family: "Berlin Sans FB Demi", sans-serif;
     box-sizing: border-box;
 }
 #wrapper{
