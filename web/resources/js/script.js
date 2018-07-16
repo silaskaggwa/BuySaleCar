@@ -339,7 +339,7 @@
     }
 //#endregion
 
-    function performLoginSuccess(response){
+    function performLoginSuccess(response, caller){
 
         if(response == "" || response == "false") {
             if(typeof caller == "undefined") {
