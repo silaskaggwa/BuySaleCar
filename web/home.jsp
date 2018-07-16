@@ -141,7 +141,6 @@
                             <div class="form-group">
                                 <label for="car-brand" class="col-form-label">Brand:</label>
                                 <select id="car-brand">
-                                    <option>Any</option>
                                     <c:forEach items="${carBrands}" var = "brand">
                                         <option>${brand}</option>
                                     </c:forEach>
@@ -170,7 +169,6 @@
                             <div class="form-group">
                                 <label for="car-shape" class="col-form-label">Type:</label>
                                 <select id="car-shape">
-                                    <option>Any</option>
                                     <c:forEach items="${carShapes}" var = "shape">
                                         <option>${shape}</option>
                                     </c:forEach>
@@ -262,6 +260,70 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button"  id="btnSubmit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="carInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 img">
+                                <img src="resources/images/b.jpg" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <h2 id="brandModel">Mercedes CLK, 2006</h2>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <th>Plate</th>
+                                                <td id="licenseNo">UAW 805B</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Color</th>
+                                                <td id="carColor">Black</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Shape</th>
+                                                <td id="carShape">SUV</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <h3 class="price">
+                                        <span class="label label-success">
+                                            <span class="dollar">$</span>
+                                            <span id="carPrice">30000</span>
+                                        </span>
+                                    </h3>
+                                    <div class="owner-info">
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-user color-green" aria-hidden="true"></span>
+                                            <span id="ownerName">Silas Kaggwa</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-envelope color-green" aria-hidden="true"></span>
+                                            <span id="ownerEmail">silakag@gmail.com</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-earphone color-green" aria-hidden="true"></span>
+                                            <span id="ownerPhone">+1 641 954 6999</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="glyphicon glyphicon-map-marker color-green" aria-hidden="true"></span>
+                                            <span id="ownerAddress">Fairfeild, Iowa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

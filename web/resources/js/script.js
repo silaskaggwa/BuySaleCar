@@ -1,6 +1,8 @@
 (function () {
     "use strict";
 
+    let carsDisplayed = [];
+
     $(function () {
 
         $(document).ajaxStart(function() {
@@ -200,7 +202,17 @@
                     }
                 });
             }
+        });
 
+        $(document).on('click', '.car-info', function () {
+            let carId = $(this).attr('id');
+            for (let car of carsDisplayed){
+                if (car.id == carId){
+                    loadCarInfoModal(car);
+                    displayCarInfoModal();
+                }
+            }
+            return false;
         });
 
         fetchAllCars();
@@ -223,18 +235,31 @@
         }
     });
 
+    function loadCarInfoModal(car){
+        $('#brandModel').text(car.brand +", "+car.model);
+        $('#licenseNo').text(car.license);
+        $('#carColor').text(car.color);
+        $('#carShape').text(car.shape);
+        $('#carPrice').text(car.price);
+        $('#ownerName').text(car.owner.firstname+" "+car.owner.lastName);
+        $('#ownerEmail').text(car.owner.email);
+        $('#ownerPhone').text(car.owner.phone);
+        $('#ownerAddress').text(car.owner.address);
+    }
+
+    function displayCarInfoModal(){
+        $('#carInfoModal').modal('show');
+    }
+
     function generateCarHtml(car) {
         return `<div class="car-info-wrapper">
                     <div class="image-wrapper">
                         <img src="${car.image}" alt="${car.brand + car.model}"/>
                     </div>
                    <div class="info-wrapper">
-                       <h4>${car.license}</h4>
+                       <h4>${car.brand +', '+ car.model}</h4>
                        <h4>${car.price}</h4>
-                       <button type="button" class="btn btn-success">View owner</button>
-                       <div class="owner-info-wrapper">
-
-                       </div>
+                       <button id="${car.id}" type="button" class="btn btn-success car-info">View</button>
                    </div>
                 </div>`;
     }
@@ -256,6 +281,8 @@
                 }
                 $('#content').empty();
                 setTimeout(()=>$('#content').append(carsHtml), 0);
+
+                carsDisplayed = response;
             },
             error: function (error) {
                 console.log(error);

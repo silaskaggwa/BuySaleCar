@@ -2,7 +2,6 @@ package controllers;
 
 import com.google.gson.Gson;
 import datastorage.DataStorage;
-import exceptions.CarAlreadyExistsException;
 import model.Car;
 import model.User;
 import org.apache.commons.fileupload.FileItem;
@@ -11,11 +10,9 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import services.CarService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -56,6 +53,7 @@ public class CarServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         out.print(new Gson().toJson(CarService.INSTANCE.filterCars(minPriceQuery, maxPriceQuery, brandsQuery, shapesQuery)));
         out.flush();
+
     }
 
     @Override
