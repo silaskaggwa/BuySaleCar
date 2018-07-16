@@ -54,7 +54,7 @@
                         <li id="Register"><a href="#">Register</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right log-out <%=request.getSession().getAttribute("userName") == null?"none":"" %>" >
-                        <li id="loginName">${userName}</li>
+                        <li id="loginName"><a>Hello ${userName}</a></li>
                         <li id="logout"><a href="#">Log out</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
