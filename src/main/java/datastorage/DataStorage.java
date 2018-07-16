@@ -6,6 +6,7 @@ import model.Car;
 import model.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -81,7 +82,12 @@ public enum DataStorage {
     }
 
     public List<Car> getAllCars(){
-        return cars;
+        return reverseList(cars);
+    }
+
+    private List<Car> reverseList(List<Car> l) {
+        Collections.reverse(l);
+        return l;
     }
 
     public User getUserById(int id){

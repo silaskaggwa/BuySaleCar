@@ -59,6 +59,14 @@
 
     function loadCarInfoModal(car){
         $('#brandModel').text(car.brand +", "+car.model);
+        $('#licenseNo').text(car.license);
+        $('#carColor').text(car.color);
+        $('#carShape').text(car.shape);
+        $('#carPrice').text(car.price);
+        $('#ownerName').text(car.owner.firstname+" "+car.owner.lastName);
+        $('#ownerEmail').text(car.owner.email);
+        $('#ownerPhone').text(car.owner.phone);
+        $('#ownerAddress').text(car.owner.address);
     }
 
     function displayCarInfoModal(){

@@ -196,37 +196,42 @@
                                         <tbody>
                                             <tr>
                                                 <th>Plate</th>
-                                                <td>UAW 805B</td>
+                                                <td id="licenseNo">UAW 805B</td>
                                             </tr>
                                             <tr>
                                                 <th>Color</th>
-                                                <td>Black</td>
+                                                <td id="carColor">Black</td>
                                             </tr>
                                             <tr>
                                                 <th>Shape</th>
-                                                <td>SUV</td>
+                                                <td id="carShape">SUV</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div>
-                                    <h3 class="price"><span class="label label-success"><span class="dollar">$</span> 30000</span></h3>
+                                    <h3 class="price">
+                                        <span class="label label-success">
+                                            <span class="dollar">$</span>
+                                            <span id="carPrice">30000</span>
+                                        </span>
+                                    </h3>
                                     <div class="owner-info">
                                         <div class="row">
                                             <span class="glyphicon glyphicon-user color-green" aria-hidden="true"></span>
-                                            Silas Kaggwa
+                                            <span id="ownerName">Silas Kaggwa</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-envelope color-green" aria-hidden="true"></span>
-                                            silakag@gmail.com
+                                            <span id="ownerEmail">silakag@gmail.com</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-earphone color-green" aria-hidden="true"></span>
-                                            +1 641 954 6999
+                                            <span id="ownerPhone">+1 641 954 6999</span>
                                         </div>
                                         <div class="row">
                                             <span class="glyphicon glyphicon-map-marker color-green" aria-hidden="true"></span>
-                                            Fairfeild, Iowa
+                                            <span id="ownerAddress">Fairfeild, Iowa</span>
                                         </div>
                                     </div>
                                 </div>
