@@ -60,3 +60,6 @@ footer{
 .filter {
     margin: 15px;
 }
+.error{
+    border: 1px solid red;
+}

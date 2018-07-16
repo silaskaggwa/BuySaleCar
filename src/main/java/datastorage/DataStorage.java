@@ -4,11 +4,10 @@ import exceptions.CarAlreadyExistsException;
 import exceptions.UserAlreadyExistsException;
 import model.Car;
 import model.User;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public enum DataStorage {
 
@@ -19,6 +18,7 @@ public enum DataStorage {
     public String[] carBrands = {"Mercedes","BMW","Toyota","Audi","Tesla","Ford","Cadillac","Mazda","Buick",
             "Chevrolet","Lexus","Other"};
     public String[] carShapes = {"Sedan","SUV","Van","Hatchback","Truck","Crossover","Coupe","Convertible"};
+    public Map<String, String>  cookieMap = new HashMap<>();
 
     public void loadDefaultData(){
         User u1 = new User(1,"silas", "kaggwa", "silakag@gmail.com",

@@ -133,20 +133,55 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="addCarForm">
                             <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Car Model:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <label for="car-model" class="col-form-label">Model:</label>
+                                <input type="text" class="form-control" id="car-model">
                             </div>
                             <div class="form-group">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
+                                <label for="car-brand" class="col-form-label">Brand:</label>
+                                <select id="car-brand">
+                                    <option>Any</option>
+                                    <c:forEach items="${carBrands}" var = "brand">
+                                        <option>${brand}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-price" class="col-form-label">Price:</label>
+                                <input type="number" class="form-control" id="car-price">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-color" class="col-form-label">Color:</label>
+                                <input type="text" class="form-control" id="car-color">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-discount" class="col-form-label">Discount:</label>
+                                <input type="number" class="form-control" id="car-discount">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-image" class="col-form-label">Image:</label>
+                                <input type="file" class="form-control" id="car-image">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-number" class="col-form-label">Number:</label>
+                                <input type="text" class="form-control" id="car-number">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-shape" class="col-form-label">Type:</label>
+                                <select id="car-shape">
+                                    <option>Any</option>
+                                    <c:forEach items="${carShapes}" var = "shape">
+                                        <option>${shape}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </form>
+                        <label class="col-form-label" id="car-add-msg"></label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="model">Close</button>
-                        <button type="button" class="btn btn-primary">Add Car</button>
+                        <button type="button" class="btn btn-primary" id="btnAddCar">Add Car</button>
                     </div>
                 </div>
             </div>
