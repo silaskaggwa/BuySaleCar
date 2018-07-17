@@ -33,9 +33,9 @@ public enum CarService {
         boolean isSold = false;
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 
-           Date startDate = df.parse(carDict.get("date"));
-            String newDateString = df.format(startDate);
-            System.out.println(newDateString);
+        Date startDate = df.parse(carDict.get("date"));
+        String newDateString = df.format(startDate);
+        System.out.println(newDateString);
 
         double discount =Double.parseDouble( carDict.get("discount"));
         String image = carDict.get("image");

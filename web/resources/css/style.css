@@ -88,3 +88,8 @@ h3.price{
 .none{
     display:none !important;
 }
+
+#carInfoModal .modal-lg {
+    width: auto;
+    max-width: 1200px;
+}
