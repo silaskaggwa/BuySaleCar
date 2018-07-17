@@ -143,8 +143,8 @@
         $("#btnAddCar").click(function (e) {
             if(validateAddCarModal()){
 
-                let data = new FormData(document.getElementById("addCarForm"));
-                var car ={
+                let data = new FormData();
+                /*var car ={
                     license: $("#car-number").val().trim(),
                     model:  $("#car-model").val().trim(),
                     brand:  $("#car-brand").val().trim(),
@@ -153,7 +153,7 @@
                     date: new Date().getMonth()+"/"+new Date().getDate()+"/"+new Date().getFullYear(),
                     discount: $("#car-discount").val().trim(),
                     image:  $("#car-image")[0].files[0]
-                }
+                }*/
                 data.append("number", $("#car-number").val().trim());
                 data.append("model", $("#car-model").val().trim());
                 data.append("brand", $("#car-brand").val().trim());
